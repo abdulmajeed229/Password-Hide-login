@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Hide & Login</title>
+</head>
+
+<body>
+
+    <style>
+
+        body{
+
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+        }
+        .box{
+
+            height: 100px;
+            width: 400px;
+            background-color: rgb(255, 255, 255);
+            box-shadow:  0px 0px 2px rgb(0, 10, 0);
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+        }
+        input[type='password']{
+padding-left: 10px;
+            height: 35px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            border: 1px solid rgb(223, 218, 228);
+        }
+        input[type='text']{
+padding-left: 10px;
+            height: 35px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            border: 1px solid rgb(223, 218, 228);
+        }
+        button{
+            height: 40px;
+            width: 100px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(124, 170, 240);
+            color: white;
+        }
+    </style>
+
+
+    <div class="box">
+
+        <form action="#">
+
+            <input type="password" name="" id="input" placeholder="Your Password Here">
+            <button id="hide">Show</button>
+        </form>
+    </div>
+
+    <script>
+
+        let btn = document.getElementById('hide');
+
+        let input = document.getElementById('input');
+
+
+        btn.onclick = function(){
+
+
+            if(input.type === 'password'){
+                
+                input.type = 'text';
+
+                btn.innerHTML = "Hide"
+                
+            }else{
+                input.type = 'password'
+
+                btn.innerHTML = 'Show'
+            }
+        }
+            </script>
+</body>
+
+</html>
